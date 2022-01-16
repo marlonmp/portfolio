@@ -39,7 +39,7 @@
     margin: 0;
     padding: 0;
 
-    outline: solid 1px red;
+    /* outline: solid 1px red; */
 }
 
 *::selection {
@@ -56,28 +56,24 @@ html::-webkit-scrollbar {
     height: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
     font-family: 'Ubuntu-Bold', sans-serif;
 }
 
 h1 {
-    font-size: 72px;
+    font-size: 30px;
 }
 
 h2 {
-    font-size: 48px;
-}
-
-h3 {
-    font-size: 36px;
-}
-
-h4 {
     font-size: 28px;
 }
 
-h5 {
-    font-size: 14px;
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
 }
 
 .icons {
@@ -142,20 +138,23 @@ main {
 }
 
 #precentation > div {
-    
-    max-width: 1440px;
+
+    width: 300px;
 
     margin: 0 auto;
 
     display: grid;
+    justify-items: center;
 
-    grid-template-columns: minmax(auto, 600px) auto;
-    grid-template-rows: minmax(auto, 600px);
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(2, 300px);
 }
 
 #profile_img {
-    max-width: 600px;
-    max-height: 600px;
+    width: 250px;
+    height: 300px;
+
+    position: relative;
     
     overflow: hidden;
 }
@@ -163,12 +162,15 @@ main {
 #profile_img > img {
     width: 100%;
     
+    position: absolute;
+    bottom: 0;
+
     filter:
-    drop-shadow(18px 18px 0px var(--white-hex))
-    drop-shadow(18px -18px 0px var(--white-hex))
-    drop-shadow(-18px -18px 0px var(--white-hex))
-    drop-shadow(-18px 18px 0px var(--white-hex))
-    drop-shadow(-18px 0px 0px var(--white-hex));
+    drop-shadow(8px 8px 0px var(--white-hex))
+    drop-shadow(8px -8px 0px var(--white-hex))
+    drop-shadow(-8px -8px 0px var(--white-hex))
+    drop-shadow(-8px 8px 0px var(--white-hex))
+    drop-shadow(-8px 0px 0px var(--white-hex));
 }
 
 #greeting {
@@ -194,77 +196,15 @@ main {
 }
 
 #greeting .icons * {
+    width: 18px;
     margin-right: 20px;
-}
-
-@media (width > 1000px) {
-    /*    
-    #precentation > div {
-    
-        max-width: 1440px;
-    
-        margin: 0 auto;
-    
-        display: grid;
-    
-        grid-template-columns: minmax(auto, 600px) auto;
-        grid-template-rows: minmax(auto, 600px);
-    }
-    
-    #profile_img {
-        max-width: 600px;
-        max-height: 600px;
-        
-        overflow: hidden;
-    }
-    
-    #profile_img > img {
-        width: 100%;
-        
-        filter:
-        drop-shadow(18px 18px 0px var(--white-hex))
-        drop-shadow(18px -18px 0px var(--white-hex))
-        drop-shadow(-18px -18px 0px var(--white-hex))
-        drop-shadow(-18px 18px 0px var(--white-hex))
-        drop-shadow(-18px 0px 0px var(--white-hex));
-    }
-    
-    #greeting {
-        width: 100%;
-        height: 100%;
-    
-        background-color: var(--blue-light-hex);
-    }
-    
-    #greeting > article {
-    
-        width: fit-content;
-        height: 100%;
-    
-        margin: 0 auto;
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    
-        color: var(--white-hex)
-    
-    }
-    
-    #greeting .icons * {
-        margin-right: 20px;
-    } */
 }
 
 /* About me */
 
-/* #about_me {
-    padding: 200px 0;
-} */
-
 #about_me div {
-    max-width: 1440px;
-    height: 600px;
+    width: 300px;
+    height: 500px;
 
     margin: 0 auto;
 
@@ -281,8 +221,7 @@ main {
 }
 
 #about_me div > h3 {
-    max-width: 1000px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 /* Skill set */
@@ -293,7 +232,7 @@ main {
 }
 
 #skill_set > div {
-    max-width: 1440px;
+    width: 300px;
     margin: 0 auto;
 
     display: grid;
@@ -303,15 +242,11 @@ main {
     grid-template-rows: repeat(3, auto);
 }
 
-#skill_set > div > * {
-    padding-bottom: 80px;
-}
-
 #skill_set header {
     display: flex;
     align-items: center;
 
-    padding-top: 80px;
+    padding: 25px 0;
 }
 
 #skill_set header > h1 {
@@ -320,15 +255,17 @@ main {
 }
 
 #skill_set nav {
-    min-width: 600px;
+    /* min-width: 600px; */
+
+    height: 200px;
     
     display: grid;
+    justify-content: center;
     
-    grid-template-columns: repeat(3, 220px);
-    grid-template-rows: 55px;
-    
-    justify-content: space-around;
+    grid-template-columns: 150px;
+    grid-template-rows: repeat(3, 40px);
 
+    align-content: space-evenly;
 }
 
 #skill_set nav > h4 {
@@ -358,21 +295,22 @@ main {
 }
 
 #skill_set #skills_container {
-    min-width: 1000px;
     height: fit-content;
+
+    padding: 25px 0;
 }
 
 #skill_set #skills_container > div {
     width: 100%;
-    height: 425px;
+    height: 800px;
     
     display: none;
     
-    grid-template-columns: repeat(2, 450px);
-    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: 170px;
+    grid-template-rows: repeat(4, 170px);
     
-    justify-content: space-around;
-    align-content: space-around;
+    justify-content: center;
+    align-content: space-between;
     
 }
 
@@ -383,12 +321,11 @@ main {
 #skill_set #skills_container > div > div {
     display: grid;
 
-    align-content: center;
-    align-items: center;
-    justify-content: space-evenly;
+    align-content: space-evenly;
+    justify-content: center;
 
-    grid-template-columns: 75px 250px;
-    grid-template-rows: 75px;
+    grid-template-columns: 90px;
+    grid-template-rows: 90px 20px;
 
     background-color: var(--white-hex);
     border-radius: 12px;
@@ -397,12 +334,15 @@ main {
 #skill_set #skills_container > div img {
     height: 100%;
 
+    margin: 0 auto;
+
     border-radius: 8px;
 }
 
 #skill_set #skills_container > div span {
     display: flex;
 
+    text-align: center;
     justify-content: center;
     align-items: center;
 }
@@ -410,18 +350,17 @@ main {
 /* Experience */
 
 #experience > div {
-    max-width: 100%;
-    width: 1440px;
+    width: 300px;
     
-    padding: 80px 0;
+    padding: 50px 0;
     margin: 0 auto;
 }
 
 #experience nav {
     display: grid;
     
-    grid-template-columns: repeat(2, 350px);
-    grid-template-rows: 80px;
+    grid-template-columns: 170px;
+    grid-template-rows: repeat(2, 80px);
     
     justify-content: space-evenly;
     align-items: center;
@@ -453,7 +392,6 @@ main {
 }
 
 #experiences_container > div {
-    /* max-width: 1440px; */
     width: 100%;
 
     overflow-x: auto;
@@ -485,18 +423,17 @@ main {
     width: fit-content;
 
     margin: 0 auto;
-    margin-top: 40px;
 
     display: flex;
 
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #experiences_container .vertical_grid > div {
     width: 265px;
     height: 300px;
     
-    margin: 50px;
+    margin: 50px 18px;
     
     display: flex;
     flex-direction: column;
@@ -570,8 +507,8 @@ main {
 }
 
 #contact_me > div {
-    max-width: 1440px;
-    height: 600px;
+    width: 300px;
+    height: 400px;
 
     margin: 0 auto;
     display: flex;
@@ -582,9 +519,7 @@ main {
 }
 
 #contact_me .icons {
-    max-width: 800px;
-    min-width: 300px;
-    width: 800px;
+    width: 100%;
 
     justify-content: space-around;
 }
