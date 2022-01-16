@@ -39,7 +39,7 @@
     margin: 0;
     padding: 0;
 
-    /* outline: solid 1px red; */
+    outline: solid 1px red;
 }
 
 *::selection {
@@ -345,6 +345,21 @@ main {
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 699px) {
+
+    #skill_set #skills_container > div {
+        height: 700px;
+
+        grid-template-columns: 300px;
+        grid-template-rows: repeat(4, 150px);
+    }
+
+    #skill_set #skills_container > div > div {    
+        grid-template-columns: 75px 160px;
+        grid-template-rows: 75px;
+    }
 }
 
 /* Experience */
