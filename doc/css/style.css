@@ -39,7 +39,7 @@
     margin: 0;
     padding: 0;
 
-    outline: solid 1px red;
+    /* outline: solid 1px red; */
 }
 
 *::selection {
@@ -91,6 +91,24 @@ h4 {
     
     h4 {
         font-size: 22px;
+    }
+}
+
+@media (min-width: 1439px) {
+    h1 {
+        font-size: 72px;
+    }
+    
+    h2 {
+        font-size: 48px;
+    }
+    
+    h3 {
+        font-size: 36px;
+    }
+    
+    h4 {
+        font-size: 28px;
     }
 }
 
@@ -245,6 +263,29 @@ main {
     }
 }
 
+@media (min-width: 1439px) {
+    #precentation > div {
+        width: 1440px;
+    
+        grid-template-columns: 600px auto;
+        grid-template-rows: 600px;
+    }
+    
+    #profile_img {
+        width: 600px;
+        height: 600px;
+    }
+    
+    #profile_img > img {    
+        filter:
+        drop-shadow(18px 18px 0px var(--white-hex))
+        drop-shadow(18px -18px 0px var(--white-hex))
+        drop-shadow(-18px -18px 0px var(--white-hex))
+        drop-shadow(-18px 18px 0px var(--white-hex))
+        drop-shadow(-18px 0px 0px var(--white-hex));
+    }
+}
+
 /* About me */
 
 #about_me div {
@@ -278,6 +319,17 @@ main {
     
     #about_me div > h3 {
         width: 750px;
+    }
+}
+
+@media (min-width: 1439px) {
+    #about_me div {
+        width: 1440px;
+        height: 600px;
+    }
+    
+    #about_me div > h3 {
+        width: 1100px;
     }
 }
 
@@ -464,6 +516,35 @@ main {
     }
 }
 
+@media (min-width: 1439px) {
+    #skill_set > div {
+        width: 1440px;
+    }
+    
+    #skill_set nav {    
+        width: 1440px;
+        height: 150px;
+        
+        grid-template-columns: repeat(3, 250px);
+        grid-template-rows: 55px;
+    }
+    
+    #skill_set #skills_container > div {
+        width: 1440px;
+        height: 500px;
+        
+        grid-template-columns: repeat(2, 450px);
+        grid-template-rows: repeat(2, 150px);
+        
+    }
+    
+    #skill_set #skills_container > div > div {
+    
+        grid-template-columns: 75px 250px;
+        grid-template-rows: 75px;
+    }
+}
+
 /* Experience */
 
 #experience > div {
@@ -628,6 +709,43 @@ main {
     }
 }
 
+@media (min-width: 1439px) {
+    #experience > div {
+        width: 1440px;
+    }
+    
+    #experience nav {
+        display: grid;
+        
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: 80px;
+    }
+
+    #experiences_container > * {
+        width: 1440px;
+    }
+    #experiences_container .vertical_grid {
+        width: fit-content;
+        justify-content: space-around;
+    }
+
+    #experiences_container .vertical_grid > div {
+        width: 300px;
+        height: 325px;
+        
+        margin: 50px;
+    }
+    
+    #experiences_container .vertical_grid header {
+        width: 220px;
+        height: 160px;
+    }
+    
+    #experiences_container .vertical_grid footer {
+        font-size: 21px;
+    }
+}
+
 /* Contact me */
 
 #contact_me {
@@ -675,5 +793,11 @@ main {
     #contact_me > div {
         width: 900px;
         height: 500px;
+    }
+}
+
+@media (min-width: 1439px) {
+    #contact_me > div {
+        width: 1440px;
     }
 }
