@@ -167,13 +167,13 @@ main {
     background-color: var(--white-hex);
 }
 
-/* Precentation */
+/* Presentation */
 
-#precentation {
+#presentation {
     background-color: var(--blue-hex);
 }
 
-#precentation > div {
+#presentation > div {
 
     width: 300px;
 
@@ -237,7 +237,7 @@ main {
 }
 
 @media (min-width: 899px) {
-    #precentation > div {
+    #presentation > div {
         width: 900px;
     
         grid-template-columns: 400px auto;
@@ -264,7 +264,7 @@ main {
 }
 
 @media (min-width: 1439px) {
-    #precentation > div {
+    #presentation > div {
         width: 1440px;
     
         grid-template-columns: 600px auto;
